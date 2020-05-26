@@ -8,6 +8,6 @@ This is to register US locale User for VCA
 * select radiobutton "Mr." as value
 * Enter "test" as firstname and "user" as lastname
 * select dropdown value as "US"
-* Enter "testing_18@qa.akqa.com" in username and "Test12345" in password
+* Enter "testing_19@qa.akqa.com" in username and "Test12345" in password
 * click  button "Submit"
     

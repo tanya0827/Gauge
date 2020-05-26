@@ -1,9 +1,10 @@
-# User Login China locale
-This is to check user is able to login
+# User Log in page on VCA for CHina locale
+This is to log in a user on VCA.
 
-## Check Login Page is opening up
-* Go to homepage
+## Check if user is able to lo
+* goto page "https://qa-pdg-pub-vca.akqa.technology/cn/zh/home.html"
 * Click profile icon
-* Confirm that text "SIGN IN" is visible
-* Enter "+8613122248667" as mobileNo
-* Confirm that text "SEND VERIFICATION CODE" is present and press enter
+* Enter "lucy09@qa.akqa.com" above "Forgot Password?"
+* click button "Next"
+* Enter "Test1234" above "Forgot Password?"
+* click button "Log In"
