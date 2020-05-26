@@ -336,3 +336,9 @@ step("Click button <arg0>", async function(arg0) {
     await evaluate((text("Submit")), ele => ele.click()); 
     await waitFor(10000);
 });
+
+step("Click Address and check if address is updated", async function() {
+    await waitFor(9000);
+    await click(link({title: "Address"}, {navigationTimeout: 30000}));
+    await waitFor(10000);
+});

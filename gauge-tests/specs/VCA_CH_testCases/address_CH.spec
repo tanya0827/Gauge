@@ -16,5 +16,8 @@ This is to check user is able to update address
 * select "shipping.district" value as "林周县"
 * enter "China" as address and enter "+8613122208772" as phoneNumber and press enter
 * Click button "SAVE PREFRENCES"
+* Click profile icon
+* Click Address and check if address is updated
+
 
 
