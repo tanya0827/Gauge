@@ -138,7 +138,7 @@ step("Click logout", async function() {
 });
 
 step("Click Address", async function() {
-    await waitFor(5000);
+    await waitFor(9000);
 	await click(link({title: "Address"}, {navigationTimeout: 30000}));
 });
 
@@ -311,9 +311,10 @@ step("click button <arg0>", async function(arg0) {
 });
 
 step("Enter <arg0> as firstName and <arg1> as lastName", async function(arg0, arg1) {
-	await focus(textBox({name :"shipping.firstname"}));
+    await waitFor(2000);
+	await focus(textBox({name :"shipping.firstName2"}));
     await write(arg0);
-    await focus(textBox({name :"shipping.lastname"}));
+    await focus(textBox({name :"shipping.lastName2"}));
     await write(arg1);
 });
 
@@ -327,6 +328,11 @@ step("enter <arg0> as address and enter <arg1> as phoneNumber and press enter", 
     await write(arg0);
     await focus(textBox({name :"shipping.phone"}));
     await write(arg1);
+    await evaluate((text("Submit")), ele => ele.click()); 
+    await waitFor(10000);
+});
+
+step("Click button <arg0>", async function(arg0) {
     await evaluate((text("Submit")), ele => ele.click()); 
     await waitFor(10000);
 });
