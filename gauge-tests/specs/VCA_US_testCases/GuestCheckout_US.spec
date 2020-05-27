@@ -8,7 +8,6 @@ This is to check logged guest user is able to checkout
 * Click link "Classic High Jewellery"
 * Click image "Classic Jewelry&nbsp;Classic Jewelry&nbsp;" for selection of jewellery
 * Scroll down and Click product to add to bag
-* Click button "add to bag"
 * Click link "Shopping Bag"
 * Enter "94105-2000" as zipCode and press enter
 * Enter "testing_16@qa.akqa.com" as guest email address and press enter

@@ -106,7 +106,7 @@ step("Enter <arg0> as guest email address and press enter", async function(arg0)
     //await textBox({ name: "guestEmailId" },{navigationTimeout: 3000000}).exists();
     await focus(textBox({ name: "guestEmailId"},{navigationTimeout: 3000000}));
     await write(arg0);
-    await evaluate((text("Submit")), ele => ele.click()); 
+    await evaluate((text("Submit"),{navigationTimeout: 3000000}), ele => ele.click()); 
 });
 
 step("Click text <arg0>", async function(arg0) {
@@ -161,7 +161,7 @@ step("Click icon <arg0>", async function(arg0) {
 
 
 step("Click link <arg0>", async function(arg0) {
-	await click(link({ title: arg0 },{navigationTimeout: 30000}));
+	await click(link({title: arg0},{navigationTimeout: 300000}));
 });
 
 step("Click image <arg0> for selection of jewellery", async function(arg0) {
