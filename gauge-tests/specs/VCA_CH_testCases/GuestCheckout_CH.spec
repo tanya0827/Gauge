@@ -2,14 +2,19 @@
 This is to check logged guest user is able to checkout
 
 ## Check Guest Checkout is running
-* Goto product page
+* Goto "https://qa-pdg-pub-vca.akqa.technology/cn/zh/collections/jewelry/perlee/vcaro3y600-vcaro3y600---vca-baseline-perlee-signature-ring.html"
 * Click "SELECT YOUR SIZE"
-* Click add to bag button
-* Click shopping bag
+* Click button "add to bag"
+* Click link "Shopping Bag"
 * Confirm that "CHECKOUT" button exists and press enter
 * Enter "testing_16@qa.akqa.com" as guest email address and press enter
-* Enter "TestUser" as firstName and "AKQA" as lastName and "201" as streetNumber and "Harrison St" as streetName and "San Francisco" as city
-* Enter "94105-2000" as zipCode and "18006545456" as phoneNumber and press enter
+* Enter "TestUser" as "shipping.firstname"
+* Enter "AKQA" as "shipping.lastname"
+* Enter "201" as "shipping.streetnumber"
+* Enter "Harrison St" as "shipping.streetname"
+* Enter "San Francisco" as "shipping.city"
+* Enter "94105-2000" as "shipping.zip"
+* Enter "18006545456" as "shipping.phone"
 * Click Choose Delivery Option
 * Click text "CONFIRM ADDRESS"
 * select radiobutton "STDD" as value for delivery type

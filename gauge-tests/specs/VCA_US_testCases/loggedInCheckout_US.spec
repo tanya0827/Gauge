@@ -2,18 +2,20 @@
 This is to check logged in user is able to checkout
 
 ## Check Checkout is running
-* Goto homepage
-* Click login icon
+* Goto "https://qa-pub-vca.akqa.technology/us/en/home.html"
+* Click icon "Profile"
 * Confirm that text "SIGN IN" is visible on the right panel
-* Enter "testing_15@qa.akqa.com" as username and "Test1234" as password and press enter
+* Enter "testing_15@qa.akqa.com" as "j_username" 
+* Enter "Test1234" as "j_password"
+* Click "Submit"
 * Wait for node existence
-* Click Creations
-* Click High Jewellery
-* Click Classic High Jewellery
-* Click image for selection of jewellery
+* Click link "Creations"
+* Click link "High Jewellery"
+* Click link "Classic High Jewellery"
+* Click image "Classic Jewelry&nbsp;Classic Jewelry&nbsp;" for selection of jewellery
 * Scroll down and Click product to add to bag
-* Click add to bag button
-* Click shopping bag
+* Click button "add to bag"
+* Click link "Shopping Bag"
 * Enter "99501" as zipCode and press enter
 * Click Choose Delivery Option
 * select radiobutton "STDD" as value for delivery type

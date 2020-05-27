@@ -2,14 +2,23 @@
 This is to check user is able to reset password
 
 ## Check Reset Password is opening up
-* Goto homepage
-* Click login icon
+* Goto "https://qa-pub-vca.akqa.technology/us/en/home.html"
+* Click icon "Profile"
 * Confirm that text "SIGN IN" is visible on the right panel
-* Enter "testing_15@qa.akqa.com" as username and "Test1234" as password and press enter
-* Click Account Settings
+* Enter "testing_15@qa.akqa.com" as "j_username" 
+* Enter "Test12345" as "j_password"
+* Click "Submit"
+* Wait for node existence
+* Click link "Account Settings"
 * Click Password
-* Enter "Test1234" as password and "Test12345" as new password and press enter
-* Click login icon
-* Click logout
-* Click login icon
-* Enter "testing_15@qa.akqa.com" as username and "Test12345" as password and press enter
+* Enter "Test12345" as "current_password"
+* Enter "Test1234" as "new_password"
+* Click button "Submit"
+* Click icon "Profile"
+* Click link "Logout"
+* Wait for node existence
+* Click icon "Profile"
+* Enter "testing_15@qa.akqa.com" as "j_username" 
+* Enter "Test1234" as "j_password"
+* Click "Submit"
+* Wait for node existence
