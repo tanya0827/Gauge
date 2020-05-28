@@ -9,3 +9,5 @@ This is to log in a user on VCA.
 * Enter "Test1234" above "Forgot Password?"
 * click button "Log In"
 * Wait for node existence
+* Check "ACCOUNT SETTINGS" exists
+* Check "ADDRESS" exists

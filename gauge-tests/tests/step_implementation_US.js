@@ -1,5 +1,5 @@
 "use strict";
-const {$ ,above,openBrowser, closeBrowser, clear, image ,dropDown, evaluate, goto, scrollDown, click, checkBox, link, radioButton, waitFor, text, screenshot, focus, textBox, write, press, currentURL, below, button} = require("taiko");
+const {$ ,above,openBrowser, closeBrowser, clear, image ,dropDown, evaluate, goto, scrollDown, click, intervalSecs, timeoutSecs, link, radioButton, waitFor, text, screenshot, focus, textBox, write, press, currentURL, below, button} = require("taiko");
 const assert = require("assert");
 const headless = process.env.headless_chrome.toLowerCase() === "true";
 
@@ -171,4 +171,8 @@ step("Click image <arg0> for selection of jewellery", async function(arg0) {
 step("Enter <arg0> as <arg1>", async function(arg0, arg1) {
 	await focus(textBox({name : arg1}));
     await write(arg0);
+});
+
+step("Check <arg0> exists", async function(arg0) {
+    assert.ok(await text(arg0).exists());
 });

@@ -9,7 +9,9 @@ This is to register US locale User for VCA
 * Enter "test" as "first_name1" 
 * Enter "user" as "last_name1"
 * select dropdown value as "US"
-* Enter "testing_20@qa.akqa.com" as "email_address" 
+* Enter "testing_27@qa.akqa.com" as "email_address" 
 * Enter "Test12345" as "password"
 * click  button "Submit"
+* Check "CREATE AN ACCOUNT" exists
+* Check "SIGN IN" exists
     

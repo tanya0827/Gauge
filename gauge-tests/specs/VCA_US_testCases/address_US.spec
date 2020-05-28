@@ -20,4 +20,7 @@ This is to check user is able to edit address
 * Enter "18006545456" as "shipping.phone"
 * Click "SAVE PREFERENCES"
 * Wait for node existence
+* Check "ADD AN ADDRESS" exists
+* Check "edit" exists
+
 

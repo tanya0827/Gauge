@@ -20,3 +20,5 @@ This is to check user is able to update address
 * Enter "+8613122208772" as "shipping.phone"
 * Click "SAVE PREFERENCES"
 * Wait for node existence
+* Check "ADD AN ADDRESS" exists
+* Check "edit" exists

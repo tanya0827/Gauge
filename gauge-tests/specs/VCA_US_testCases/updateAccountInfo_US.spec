@@ -17,4 +17,5 @@ This is to check user is able to updtae personal information
 * Click icon "Profile"
 * Click link "Account Settings"
 * Click link "Personal Information"
-* Wait for node existence
+* Check "BACK" exists
+* Check "SUBMIT" exists

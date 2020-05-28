@@ -6,5 +6,6 @@ To check forgot password works for US locale.
 * Click icon "Profile"
 * Confirm that text "SIGN IN" is visible on the right panel
 * Click link "Forgot Password?"
-* Enter "testing_15@qa.akqa.com" in email and press enter
-* Wait for node existence
+* Enter "testing_20@qa.akqa.com" in email and press enter
+* Check "PASSWORD RECOVERY" exists
+* Check "HERE TO HELP" exists

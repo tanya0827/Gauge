@@ -9,3 +9,5 @@ This is to check user is able to login
 * Enter "Test1234" as "j_password"
 * Click "Submit"
 * Wait for node existence
+* Check "ACCOUNT SETTINGS" exists
+* Check "ADDRESS" exists
