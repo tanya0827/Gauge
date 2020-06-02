@@ -1,5 +1,6 @@
 # Reset Password US locale
 This is to check user is able to reset password
+Tags: us-sanity, us-all
 
 ## Check Reset Password is opening up
 * Goto "https://qa-pub-vca.akqa.technology/us/en/home.html"
@@ -24,3 +25,4 @@ This is to check user is able to reset password
 * Wait for node existence
 * Check "ACCOUNT SETTINGS" exists
 * Check "ADDRESS" exists
+

@@ -1,5 +1,6 @@
 # User Register US Locale
 This is to register US locale User for VCA
+Tags: us-sanity, us-all
 
 ## Check Sign Up Page is opening up
 * Goto "https://qa-pub-vca.akqa.technology/us/en/home.html"
@@ -8,10 +9,11 @@ This is to register US locale User for VCA
 * select radiobutton "Mr." as value
 * Enter "test" as "first_name1" 
 * Enter "user" as "last_name1"
-* select dropdown value as "US"
+* select "website_ country" value as "US"
 * Enter "testing_29@qa.akqa.com" as "email_address" 
 * Enter "Test12345" as "password"
 * click  button "Submit"
 * Check "CREATE AN ACCOUNT" exists
 * Check "SIGN IN" exists
+
     

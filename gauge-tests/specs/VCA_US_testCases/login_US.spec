@@ -1,5 +1,6 @@
 # User Login US locale
 This is to check user is able to login
+Tags: us-basic, us-sanity, us-all
 
 ## Check Login Page is opening up
 * Goto "https://qa-pub-vca.akqa.technology/us/en/home.html"
@@ -11,3 +12,4 @@ This is to check user is able to login
 * Wait for node existence
 * Check "ACCOUNT SETTINGS" exists
 * Check "ADDRESS" exists
+

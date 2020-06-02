@@ -1,15 +1,23 @@
 "use strict";
-const {$ ,above,openBrowser, closeBrowser, clear, image ,dropDown, evaluate, goto, scrollDown, click, intervalSecs, timeoutSecs, link, radioButton, waitFor, text, screenshot, focus, textBox, write, press, currentURL, below, button} = require("taiko");
+const {$ ,above,openBrowser, closeBrowser, clear, image ,dropDown, evaluate, goto, scrollDown, click, link, radioButton, waitFor, text, focus, textBox, write, currentURL, button} = require("taiko");
 const assert = require("assert");
 const headless = process.env.headless_chrome.toLowerCase() === "true";
 
 
 beforeSuite(async () => {
-    await openBrowser({args:['--no-sandbox', '--disable-setuid-sandbox'], headless: headless })
+    //await openBrowser({args:['--no-sandbox', '--disable-setuid-sandbox'], headless: headless })
     //await openBrowser()
 });
 
 afterSuite(async () => {
+    //await closeBrowser();
+});
+
+beforeSpec(async () => {
+    await openBrowser({args:['--no-sandbox', '--disable-setuid-sandbox'], headless: headless })
+});
+
+afterSpec(async () => {
     await closeBrowser();
 });
 
@@ -31,11 +39,7 @@ step("click  button <arg0>", async function(arg0) {
     await click(button({type : "submit"}));
     await currentURL();
     await waitFor(10000);
-});
-
-step("select dropdown value as <arg0>", async function(arg0) {
-    await dropDown({name: "website_ country"}).select(arg0);
-});
+});;
 
 step("select radiobutton <arg0> as value", async function(arg0) {
     await radioButton({name: "salutation"}).select()
@@ -63,7 +67,7 @@ step("Click Password", async function() {
 
 
 step("Scroll down and Click product to add to bag", async function() {
-    await scrollDown(1200,{navigationTimeout: 3000000});
+    await scrollDown(100,{navigationTimeout: 3000000});
     await waitFor(1500, {navigationTimeout: 3000000});
     await focus(($("#result_0", {navigationTimeout: 3000000}))); 
     await click(($("#result_0", {navigationTimeout: 3000000}))); 
@@ -78,11 +82,12 @@ step("Enter <arg0> as zipCode and press enter", async function(arg0) {
 });
 
 step("Click Choose Delivery Option", async function() {
+    await waitFor(4000)
     await click(button("Submit"));
 });
 
 step("select radiobutton <arg0> as value for delivery type", async function(arg0) {
-    await focus(radioButton({name: "shippingMethod"})).exists();
+    await focus(radioButton({name: "shippingMethod"}));
 	await radioButton({name: "shippingMethod"}).select(arg0);
 });
 
@@ -106,20 +111,22 @@ step("Enter <arg0> as guest email address and press enter", async function(arg0)
     //await textBox({ name: "guestEmailId" },{navigationTimeout: 3000000}).exists();
     await focus(textBox({ name: "guestEmailId"},{navigationTimeout: 3000000}));
     await write(arg0);
-    await evaluate((text("Submit"),{navigationTimeout: 3000000}), ele => ele.click()); 
+    await waitFor(3000);
+    await focus(text("CONTINUE AS GUEST"));
+    await click(text("CONTINUE AS GUEST"),{navigationTimeout:300000}); 
 });
 
 step("Click text <arg0>", async function(arg0) {
-    await evaluate((text(arg0)), ele => ele.click()); 
+    await click(text(arg0),{navigationTimeout:300000}); 
 });
 
 
 step("Wait for node existence", async function() {
-    await waitFor(12000);
+    await waitFor(20000);
 });
 
 step("Click <arg0>", async function(arg0) {
-    await waitFor (3000);
+    await waitFor(3000);
 	await click(text(arg0));
 });
 
@@ -148,20 +155,14 @@ step("Click button <arg0>", async function(arg0) {
     await waitFor(10000);
 });
 
-step("Click Address and check if address is updated", async function() {
-    await waitFor(9000);
-    await click(link({title: "Address"}, {navigationTimeout: 30000}));
-    await waitFor(10000);
-});
-
 step("Click icon <arg0>", async function(arg0) {
     await waitFor(5000);
-    await click(link({ title: arg0 }));
+    await click(link({ title: arg0 },{navigationTimeout:3000000}));
 });
 
 
 step("Click link <arg0>", async function(arg0) {
-	await click(link({title: arg0},{navigationTimeout: 300000}));
+	await click(link({title: arg0},{navigationTimeout: 30000000}));
 });
 
 step("Click image <arg0> for selection of jewellery", async function(arg0) {
@@ -175,4 +176,16 @@ step("Enter <arg0> as <arg1>", async function(arg0, arg1) {
 
 step("Check <arg0> exists", async function(arg0) {
     assert.ok(await text(arg0).exists());
+});
+
+
+step("Scroll down and select category", async function() {
+    await scrollDown(800,{navigationTimeout: 3000000});
+    await waitFor(1500, {navigationTimeout: 3000000});
+    await focus(($("#tab-earrings", {navigationTimeout: 3000000}))); 
+    await click(($("#tab-earrings", {navigationTimeout: 3000000}))); 
+});
+
+step("Scroll down", async function() {
+	await scrollDown(500);
 });

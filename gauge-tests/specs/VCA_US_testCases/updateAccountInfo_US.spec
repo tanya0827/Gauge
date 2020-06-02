@@ -1,5 +1,6 @@
 # Update personal Information for US locale
 This is to check user is able to updtae personal information
+Tags: us-basic, us-sanity, us-all
 
 ## Check user is able to update personal Information
 * Goto "https://qa-pub-vca.akqa.technology/us/en/home.html"
@@ -14,6 +15,7 @@ This is to check user is able to updtae personal information
 * Clear and enter "07/06/1995" as birth_date
 * Enter "Testing_15@qa.akqa.com" as "confirm-email_address"
 * Click "Submit"
+* Wait for node existence
 * Click icon "Profile"
 * Click link "Account Settings"
 * Click link "Personal Information"
